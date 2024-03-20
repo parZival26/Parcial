@@ -45,7 +45,7 @@ public class Login extends JFrame {
                         String logIngreso = "Usuario: " + usuario.getText() + " Fecha: " + java.time.LocalDate.now()
                                 + " Hora: " + java.time.LocalTime.now() + "\n";
                         FileManager.write("src/ingresos.log", logIngreso);
-                        new Inicio();
+                        new FrmInicio();
                     } else {
                         JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
                     }

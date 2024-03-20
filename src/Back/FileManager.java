@@ -32,8 +32,8 @@ public class FileManager {
         try {
             File file = new File(fileName);
             if (file.exists()) {
-                java.io.FileWriter fw = new java.io.FileWriter(file);
-                fw.write(context);
+                java.io.FileWriter fw = new java.io.FileWriter(file, true);
+                fw.write(context + "\n");
                 fw.close();
             } else {
                 // crear el archivo
