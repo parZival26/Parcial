@@ -75,7 +75,7 @@ public class FrmInicio extends JFrame {
         // Imagenes
 
         // config ventana
-        setTitle("Quiz 1");
+        setTitle("Clientes");
         setSize(500, 600);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

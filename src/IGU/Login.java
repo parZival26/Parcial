@@ -40,6 +40,11 @@ public class Login extends JFrame {
         ingresar.setBounds(150, 200, 100, 30);
         ingresar.addActionListener(
                 e -> {
+                    if (usuario.getText().isEmpty() || contraseña.getPassword().length == 0) {
+                        JOptionPane.showMessageDialog(null, "Usuario o contraseña vacios");
+                        return;
+                    }
+
                     if (Back.VerifyUser.verify(usuario.getText(), new String(contraseña.getPassword()))) {
                         dispose();
                         String logIngreso = "Usuario: " + usuario.getText() + " Fecha: " + java.time.LocalDate.now()

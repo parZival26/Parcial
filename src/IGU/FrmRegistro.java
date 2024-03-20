@@ -11,8 +11,8 @@ import Back.Cliente;
 
 public class FrmRegistro extends JFrame {
 
-    JLabel lblDocumento, lblNombres, lblApellidos, lblEdad, lblIdPropietario;
-    JTextField txtDocumento, txtNombres, txtApellidos, txtEdad, txtIdPropietario;
+    JLabel lblDocumento, lblNombres, lblApellidos, lblEdad, lblIdCliente;
+    JTextField txtDocumento, txtNombres, txtApellidos, txtEdad, txtIdCliente;
     JButton btnRegistrar, btnRegresar;
     ImageIcon imgPen, imgBack;
     JPanel panel;
@@ -48,11 +48,11 @@ public class FrmRegistro extends JFrame {
         txtEdad = new JTextField(15);
         panel.add(txtEdad);
 
-        lblIdPropietario = new JLabel("Id Propietario");
-        lblIdPropietario.setBounds(10, 140, 70, 25);
-        panel.add(lblIdPropietario);
-        txtIdPropietario = new JTextField(15);
-        panel.add(txtIdPropietario);
+        lblIdCliente = new JLabel("Id Cliente");
+        lblIdCliente.setBounds(10, 140, 70, 25);
+        panel.add(lblIdCliente);
+        txtIdCliente = new JTextField(15);
+        panel.add(txtIdCliente);
 
         // Botones
 
@@ -61,11 +61,11 @@ public class FrmRegistro extends JFrame {
         btnRegistrar.setBounds(100, 500, 80, 25);
         btnRegistrar.addActionListener(
                 e -> {
-                    Cliente cliente = new Cliente(Integer.parseInt(txtIdPropietario.getText()),
+                    Cliente cliente = new Cliente(Integer.parseInt(txtIdCliente.getText()),
                             Integer.parseInt(txtDocumento.getText()), txtNombres.getText(), txtApellidos.getText(),
                             Integer.parseInt(txtEdad.getText()));
-                    JOptionPane.showMessageDialog(null, "Propietario registrado");
-                    ingresarPropietario(cliente);
+                    JOptionPane.showMessageDialog(null, "Cliente registrado");
+                    ingresarCliente(cliente);
 
                     dispose();
                     frmInicio.setVisible(true);
@@ -104,7 +104,7 @@ public class FrmRegistro extends JFrame {
         setResizable(false);
     }
 
-    private static void ingresarPropietario(Cliente cliente) {
+    private static void ingresarCliente(Cliente cliente) {
         File f = new File("./src/IGU/Clientes.csv");
         if (!f.exists()) {
             try {

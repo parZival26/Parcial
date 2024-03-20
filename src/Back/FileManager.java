@@ -33,7 +33,7 @@ public class FileManager {
             File file = new File(fileName);
             if (file.exists()) {
                 java.io.FileWriter fw = new java.io.FileWriter(file, true);
-                fw.write(context + "\n");
+                fw.write(context);
                 fw.close();
             } else {
                 // crear el archivo
