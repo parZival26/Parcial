@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 import Back.Cliente;
+import java.awt.*;
 
 public class FrmInicio extends JFrame {
 
@@ -26,7 +27,9 @@ public class FrmInicio extends JFrame {
         // Botones
         imgUsuario = new ImageIcon("./src/IGU/image/Usuarios.png");
         registrarCliente = new JButton("Registrar Cliente ", imgUsuario);
-        registrarCliente.setBounds(100, 100, 10, 30);
+        registrarCliente.setBounds(90, 100, 15, 30);
+        registrarCliente.setBackground(new Color(160, 21, 62));
+        registrarCliente.setForeground(Color.WHITE);
         registrarCliente.addActionListener(
                 new ActionListener() {
                     @Override
@@ -41,7 +44,9 @@ public class FrmInicio extends JFrame {
 
         imgLupa = new ImageIcon("./src/IGU/image/lupa.png");
         buscarCliente = new JButton("Buscar Cliente ", imgLupa);
-        buscarCliente.setBounds(100, 150, 10, 30);
+        buscarCliente.setBounds(110, 150, 15, 30);
+        buscarCliente.setBackground(new Color(160, 21, 62));
+        buscarCliente.setForeground(Color.WHITE);
         buscarCliente.addActionListener(
                 new ActionListener() {
                     @Override

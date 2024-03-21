@@ -3,6 +3,7 @@ package IGU;
 import javax.swing.*;
 
 import Back.FileManager;
+import java.awt.*;
 
 public class Login extends JFrame {
 
@@ -14,30 +15,36 @@ public class Login extends JFrame {
     public Login() {
         // color mas oscuro de fondo
         JPanel panel = new JPanel();
-        panel.setBackground(new java.awt.Color(225, 225, 225));
+        panel.setBackground(new java.awt.Color(0, 34, 77));
         panel.setLayout(null);
         add(panel);
 
         titulo = new JLabel("Login");
-        titulo.setBounds(175, 50, 100, 30);
+        titulo.setBounds(150, 55, 120, 30);
+        titulo.setFont(new Font("Verdana", Font.BOLD, 30));
+        titulo.setForeground(new Color(255, 32, 78));
         panel.add(titulo);
 
         user = new JLabel("Usuario");
-        user.setBounds(100, 100, 100, 30);
+        user.setBounds(95, 120, 100, 30);
+        user.setForeground(new Color(255, 32, 78));
         panel.add(user);
         usuario = new JTextField();
-        usuario.setBounds(200, 100, 100, 30);
+        usuario.setBounds(170, 120, 100, 30);
         panel.add(usuario);
 
         pass = new JLabel("Contraseña");
-        pass.setBounds(100, 150, 100, 30);
+        pass.setBounds(95, 160, 100, 30);
+        pass.setForeground(new Color(255, 32, 78));
         panel.add(pass);
         contraseña = new JPasswordField();
-        contraseña.setBounds(200, 150, 100, 30);
+        contraseña.setBounds(170, 160, 100, 30);
         panel.add(contraseña);
 
         ingresar = new JButton("Ingresar");
-        ingresar.setBounds(150, 200, 100, 30);
+        ingresar.setBackground(new Color(160, 21, 62));
+        ingresar.setForeground(Color.WHITE);
+        ingresar.setBounds(140, 220, 100, 30);
         ingresar.addActionListener(
                 e -> {
                     if (usuario.getText().isEmpty() || contraseña.getPassword().length == 0) {
@@ -59,7 +66,7 @@ public class Login extends JFrame {
         panel.add(ingresar);
 
         setTitle("Login");
-        setSize(400, 300);
+        setSize(400, 330);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(false);
